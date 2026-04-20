@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My First Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            margin-top: 20px;
+        }
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            width: 400px;
+            border-radius: 10px;
+            user-select: none;
+            pointer-events: none; /* basic protection */
+        }
+
+        /* Watermark */
+        .watermark {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 18px;
+            font-weight: bold;
+            background: rgba(0,0,0,0.3);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        /* Disable right click */
+        body {
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .download-btn {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .download-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body oncontextmenu="return false;">
+
+    <h1>Welcome to My First Page</h1>
+
+    <div class="image-container">
+        <!-- Replace 'Stars1.jpg' with your image file -->
+        <img src="Stars1.jpg" alt="My Image">
+
+        <div class="watermark">© JCCT</div>
+    </div>
+
+    <br>
+
+    <!-- Download button -->
+    <a href="Stars1.jpg" download>
+        <button class="download-btn">Download Image</button>
+    </a>
+
+</body>
+</html>
